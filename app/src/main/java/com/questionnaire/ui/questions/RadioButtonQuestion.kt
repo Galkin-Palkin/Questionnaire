@@ -1,6 +1,7 @@
 package com.questionnaire.ui.questions
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -14,7 +15,8 @@ import com.questionnaire.ui.answervariants.RadioButtonVariant
 fun RadioButtonQuestion(text: String) {
     Card(
         modifier = Modifier.padding(10.dp).fillMaxSize(),
-        elevation = 5.dp
+        elevation = 5.dp,
+        shape = RoundedCornerShape(5.dp)
     ) {
         Column(
             modifier = Modifier.fillMaxSize()
