@@ -15,21 +15,8 @@ import com.questionnaire.ui.navigation.NavHost
 @Composable
 fun MainPanel() {
     Scaffold(
-        topBar = {
-            TopAppBar(
-                backgroundColor = Color.Blue,
-                contentColor = Color.White,
-                elevation = 10.dp
-            ) {
-                Text(
-                    "Опросник",
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold,
-                    modifier = Modifier.padding(40.dp, 10.dp),
-                    color = Color.White
-                )
-            }
-        }
+        topBar = { AppHeader("Опросник") },
+        bottomBar = { AppFooter() }
     ) {
         Surface(
             modifier = Modifier.fillMaxSize(),
