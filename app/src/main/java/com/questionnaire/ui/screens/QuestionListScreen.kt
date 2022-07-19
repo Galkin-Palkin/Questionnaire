@@ -15,6 +15,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.questionnaire.ui.commonelements.AppFooter
 import com.questionnaire.ui.commonelements.AppHeader
+import com.questionnaire.ui.navigation.NavRoute
 
 @Composable
 fun QuestionListScreen(navController: NavHostController) {
@@ -43,7 +44,9 @@ fun QuestionListScreen(navController: NavHostController) {
                         contentColor = Color.White
                     ),
                     contentPadding = PaddingValues(0.dp),
-                    onClick = { /*TODO*/ }
+                    onClick = {
+                        navController.navigate(NavRoute.PollInfoScreen.route)
+                    }
                 ) {
                     Icon(
                         Icons.Filled.Add,
