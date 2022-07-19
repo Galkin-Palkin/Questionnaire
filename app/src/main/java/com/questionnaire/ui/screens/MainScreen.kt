@@ -11,11 +11,12 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.questionnaire.ui.commonelements.AppFooter
 import com.questionnaire.ui.commonelements.AppHeader
+import com.questionnaire.ui.navigation.NavHost
 
 @Composable
-fun QuestionListScreen(navController: NavHostController) {
+fun MainScreen(navController: NavHostController) {
     Scaffold(
-        topBar = { AppHeader("Список опросов") },
+        topBar = { AppHeader("Опросник") },
         bottomBar = { AppFooter(navController) }
     ) {
         Surface(

@@ -14,9 +14,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import com.questionnaire.ui.navigation.NavRoute
 
 @Composable
-fun AppFooter() {
+fun AppFooter(navController: NavController) {
     BottomAppBar(
         backgroundColor = Color.Cyan,
         contentColor = Color.White,
@@ -27,31 +29,31 @@ fun AppFooter() {
             horizontalArrangement = Arrangement.SpaceAround
         ) {
             IconButton(onClick = {
-
+                navController.navigate(route = NavRoute.QuestionListScreen.route)
             }, modifier = Modifier.size(64.dp)) {
                 Icon(
                     Icons.Filled.List,
                     contentDescription = "Список опросов",
-                    tint = Color.White)
+                    tint = Color.Black)
             }
 
             IconButton(onClick = {
-
+                navController.navigate(route = NavRoute.MainScreen.route)
             }, modifier = Modifier.size(64.dp)) {
                 Icon(
                     Icons.Filled.Home,
                     contentDescription = "Главная страница",
-                    tint = Color.White
+                    tint = Color.Black
                 )
             }
 
             IconButton(onClick = {
-
+                navController.navigate(route = NavRoute.UserScreen.route)
             }, modifier = Modifier.size(64.dp)) {
                 Icon(
                     Icons.Filled.AccountCircle,
                     contentDescription = "Аккаунт",
-                    tint = Color.White)
+                    tint = Color.Black)
             }
         }
     }

@@ -1,7 +1,7 @@
 package com.questionnaire.ui.navigation
 
 sealed class NavRoute(val route: String) {
-    object StartScreen: NavRoute("start")
+    object MainScreen: NavRoute("main")
 
     object QuestionListScreen: NavRoute("question_list")
 
