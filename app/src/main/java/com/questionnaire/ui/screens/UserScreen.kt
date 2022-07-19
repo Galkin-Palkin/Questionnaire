@@ -1,5 +1,7 @@
 package com.questionnaire.ui.screens
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
@@ -22,7 +24,12 @@ fun UserScreen(navController: NavHostController) {
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colors.background
         ) {
+            Row(
+                
+            ) {
 
+
+            }
         }
     }
 }
